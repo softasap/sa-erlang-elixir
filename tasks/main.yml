@@ -1,0 +1,6 @@
+---
+# tasks file for sa-erlang
+  - include: tasks_erlang.yml
+
+  - include: tasks_elixir.yml
+    when: option_install_elixir
