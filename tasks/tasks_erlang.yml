@@ -6,7 +6,7 @@
       - erlang
 
   - name: ERLANG | Add custom repository
-    apt_repository: repo="deb https://packages.erlang-solutions.com/ubuntu {{ ansible_distribution_release | lower }} contrib"  state=present
+    apt_repository: repo="deb https://packages.erlang-solutions.com/{{ansible_distribution | lower}} {{ ansible_distribution_release | lower }} contrib"  state=present
     become: yes
     tags:
       - erlang
