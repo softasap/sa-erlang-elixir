@@ -19,7 +19,7 @@
 
   - name: ERLANG | install additional packages, if any
     apt: pkg="{{ item }}" state="present"
-    with_items: erlang_additional_packages | default([])
+    with_items: "{{erlang_additional_packages | default([])}}"
     become: yes
     tags:
       - erlang

@@ -1,16 +1,6 @@
 ---
 # defaults file for sa-erlang see https://www.erlang-solutions.com/resources/download.html
-  root_dir: "{{role_path}}"
   role_dir: "{{role_path}}"
   erlang_package: erlang # esl-erlang
 
   option_install_elixir: true
-
-# 1. What is the erlang package?
-# Erlang/OTP Platform is a complex system composed of many smaller applications (modules). Installing the erlang package automatically installs the entire OTP suite. Since some of the more advanced users might want to download only a specific selection of modules, Erlang/OTP has been divided into smaller packages (all with the prefix erlang-) that can be installed without launching the erlang package.
-# 2. What is esl-erlang, how is it different from erlang? Have you removed it from repositories?
-# The esl-erlang package is a file containg the complete installation: it includes the Erlang/OTP platform and all of its applications. The erlang package is a frontend to a number of smaller packages. Currently we support both erlang and esl-erlang.
-# Note that the split packages have multiple advantages:
-# seamless replacement of the available packages,
-# other packages have dependencies on erlang, not esl-erlang,
-# if your disk-space is low, you can get rid of some unused parts; erlang-base needs only ~13MB of space.
